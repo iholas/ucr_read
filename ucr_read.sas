@@ -576,7 +576,7 @@ proc sort data = d2 ;
 	by oricode off; 
 	run;
 
-data &out_data;
+data d3;
 	set d2; 
 	by oricode off;
 	retain x1 x2;
@@ -858,7 +858,7 @@ data d5 (keep=state_n pop);
 	Calculate offense rates
 \\\\\\\\\\\\\\\\\\\/////////////////////
 ****************************************;
-data out_data;
+data &out_data;
 	merge d4 d5;
 	by state_n;
 
